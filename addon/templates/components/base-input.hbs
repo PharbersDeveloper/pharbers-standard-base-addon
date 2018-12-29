@@ -1,0 +1,33 @@
+{{!-- {{yield}} --}}
+<div local-class="ph-input-warp">
+    {{#if title}}
+        <label local-class="ph-input-label">{{title}}</label>
+    {{/if}}
+    {{#if (eq type "search")}}
+        {{#if icon}}
+            <div local-class="ph-input-searchbar">
+                {{input local-class="ph-input ph-input-search" type="text" placeholder=placeHolder value=inputValue}}
+                <button local-class="ph-input-search-button" {{action "click"}}>{{searchTitle}}</button>
+                {{#if isChangeIcon}}
+                    <i class={{icon}}></i>
+                {{/if}}
+            </div>
+        {{else}}
+            {{input local-class="ph-input ph-input-search" type="text" placeholder=placeHolder value=inputValue}}
+            <button local-class="ph-input-search-button" {{action "click"}}>{{searchTitle}}</button>
+        {{/if}}
+    {{else if (eq type "area")}}
+        <textarea local-class="ph-input ph-input-area" placeholder={{placeHolder}}>{{inputValue}}</textarea>
+    {{else}}
+        {{#if icon}}
+            <div local-class="ph-input-icontext">
+                {{input local-class="ph-input ph-input-default" type="text" placeholder=placeHolder value=inputValue}}
+                {{#if isChangeIcon}}
+                    <i class={{icon}}></i>
+                {{/if}}
+            </div>
+        {{else}}
+            {{input local-class="ph-input ph-input-default" type="text" placeholder=placeHolder value=inputValue}}
+        {{/if}}
+    {{/if}}
+</div>

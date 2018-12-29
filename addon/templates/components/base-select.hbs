@@ -1,0 +1,15 @@
+{{!-- {{yield}} --}}
+<div local-class="base-select-warp">
+    {{#if title}}
+        <label local-class="ph-select-label">{{title}}</label>
+    {{/if}}
+    {{#power-select 
+        searchEnabled=false
+        options=options 
+        selected=selected
+        onchange=onChange
+        disabled=disabled 
+        as |item|}}
+        {{item}}
+    {{/power-select}}
+</div>

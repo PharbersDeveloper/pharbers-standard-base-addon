@@ -1,0 +1,104 @@
+@import './standard-base';
+
+$ph-select-label-margin:8px;
+
+// /* --ie清除--*/
+// select::-ms-expand {
+//     display: none;
+// }
+// /* --火狐、谷歌清除--*/
+// select {
+//     appearance: none;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     background: url("downArrow.png") no-repeat scroll right center transparent;
+//     padding-right: 32px;
+// }
+
+
+.base-select-warp{
+    position: relative;
+    
+    .ph-select-label{
+        font-family: $ph-font-family;
+        color: $ph-fc-title;
+        font-size: $ph-fs-content;
+        margin-right: $ph-input-label-margin;
+        margin-bottom: 0;
+        line-height: 40px;
+        font-weight: normal;
+        
+    }
+    :global(.ember-power-select-trigger.ember-power-select-trigger--active.ember-basic-dropdown-trigger){
+        outline: none;
+    }
+    :global(.ember-power-select-trigger.ember-basic-dropdown-trigger){
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        // top: -10px;
+        font-family: $ph-font-family;
+        font-size: $ph-fs-content;
+        color: $ph-fc-title;
+        letter-spacing: $ph-letter-spacing-normal;
+        height: 40px;
+        border: 1px solid $ph-color-border-normal;
+        border-radius: 4px;
+        min-width: 200px;
+        width: 200px;
+        // max-width: 300px;
+        background-color: white;
+        padding-left: 8px; 
+        line-height: 38px;
+
+        &:hover{
+            outline: none;
+        }
+        :global(.ember-power-select-selected-item){
+            margin: 0;
+        }
+        :global(.ember-power-select-status-icon){
+            position: absolute;
+            top: -2px;
+            right: 8px;
+            width: 8px;
+            height: 8px;
+            border-style: solid;
+            border-color: $ph-color-border-normal;
+            border-width: 0 1px 1px 0;
+            transform: rotateZ(45deg);
+        }
+    } 
+
+    option{
+        border: 1px solid $ph-color-border-normal;
+        border-radius: 4px;
+        background-color: white;
+    }
+}
+
+:global(.ember-basic-dropdown-content.ember-power-select-dropdown){
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(85,85,85,0.50);
+    border-radius: 4px;
+
+    :global(.ember-power-select-options){
+
+        :global(.ember-power-select-option){
+            height: 32px;
+            line-height: 32px;
+            font-family: $ph-font-family;
+            color: $ph-fc-title;
+            font-size: $ph-fs-content;
+            overflow: hidden;
+            text-overflow:ellipsis;
+
+            &[aria-selected=true]{
+                background-color: transparent;
+            }
+            &[aria-current=true]{
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{{!-- {{yield}} --}}
+<div local-class="ph-btn-warp">
+    {{#if (eq type "disabled")}}
+    <button local-class="ph-btn ph-btn-{{type}}" {{action "click" params}} disabled="disabled">
+        <i class="{{icon}}"></i>
+        {{content}}
+    </button>
+    {{else if (eq type "icon")}}
+    <button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "click" params}}>
+        <i class="{{icon}}"></i>
+    </button>
+    {{else if haveBg}}
+    <button local-class="ph-btn ph-btn-{{type}} ph-btn-{{type}}-havebg" {{action "click" params}}>
+        <i class="{{icon}}"></i>
+        {{content}}
+    </button>
+    {{else}}
+    <button local-class="ph-btn ph-btn-{{type}}" {{action "click" params}}>
+        <i class="{{icon}}"></i>
+        {{content}}
+    </button>
+    {{/if}}
+</div>

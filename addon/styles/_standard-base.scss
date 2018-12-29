@@ -1,0 +1,103 @@
+@import "ember-power-select";
+
+$ph-font-family: "Chinese Quote",-apple-system,"BlinkMacSystemFont","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji Neue","Segoe UI Emoji","Segoe UI Symbol";
+
+$ph-fs-emphasize: 24px;
+$ph-fs-title: 18px;
+$ph-fs-content: 14px;
+
+$ph-fc-title: #555555;
+$ph-fc-content: #999999;
+$ph-fc-assist: #D3D3D3;
+$ph-fc-emphasize: #FF7D7E;
+
+$ph-color-main: linear-gradient(-70deg, #5E81CF 0%, #4863AC 100%);
+$ph-color-assist-main: #5E81CF;
+$ph-color-assist-sec: #899ED6;
+$ph-color-assist-bg: #F4F4F4;
+$ph-color-assist-card: #FFFFFF;
+$ph-color-func-link: #1890FF;
+$ph-color-func-success: #94E5B3;
+$ph-color-func-warning: #FAAD15;
+$ph-color-func-error: #FF7D7E;
+
+
+$ph-letter-spacing-normal: 1.5px;
+$ph-border-radius-normal: 4px;
+$ph-color-border-normal: #555555;
+
+// 标准化modal弹窗样式
+:global(.modal.in) {
+    
+    :global(.modal-dialog) {
+        
+        :global(.modal-content) {
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 3px 10px 0 rgba(85,85,85,0.50);
+            margin: 0;
+            padding: 0;
+
+            :global(.modal-header) {
+                border: none;
+                border-bottom: none;
+                padding: 16px;
+                margin: 0;
+                height: 54px;
+                
+                :global(.modal-title) {
+                    color: $ph-fc-title;
+                    font-size: $ph-fs-title;
+                    line-height: 25px;
+                    margin: 0;
+                }
+                :global(.close) {
+                    display: none;
+                }
+            }
+            
+            :global(.modal-body) {
+                border: none;
+                color: $ph-fc-title;
+                font-size: $ph-fs-content;
+                margin: 0;
+                padding: 0 16px;
+                min-height: 100px;
+                
+                p {
+                    margin: 0;
+                }
+            }
+            
+            :global(.modal-footer) {
+                border: none;
+                border-top: none;
+                color: $ph-fc-title;
+                font-size: $ph-fs-content;
+                padding: 16px;
+                margin: 0;
+                height: 72px;
+            }
+        }
+    }
+}
+/**
+*
+*弹窗位置
+*/
+// :global(.modal.in .modal-dialog) {
+    // top: 30%;
+    // transform: translateY(-50%);
+// }
+// :global(.modal-content) {
+    // left: 50%;
+    // transform: translateX(-50%);
+// }
+
+// 标准化进度条颜色
+:global(.progress){
+
+    :global(.progress-bar-success){
+        background-color: $ph-color-assist-main;
+    }
+}

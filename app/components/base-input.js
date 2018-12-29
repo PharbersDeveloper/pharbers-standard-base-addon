@@ -1,0 +1,1 @@
+export { default } from 'pharbers-standard-base-addon/components/base-input';

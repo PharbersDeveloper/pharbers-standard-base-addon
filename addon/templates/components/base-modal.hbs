@@ -1,0 +1,20 @@
+{{!-- {{yield}} --}}
+{{#bs-modal
+        fade=fade
+        backdropClose=backdropClose
+        keyboard=keyboard
+        open=open
+        onHidden=onHidden}}
+    {{#modal.header closeButton=closeButton}}
+        {{!-- <h4 class="modal-title">
+            提示
+        </h4> --}}
+    {{/modal.header}}
+    {{#modal.body}}
+        {{!-- <p>是否重新上传原文件</p> --}}
+    {{/modal.body}}
+    {{#modal.footer}}
+        {{!-- {{base-button type="second" content="取消" onClick=(action modal.close)}}
+        {{base-button type="" content="重新上传" onClick=(action 'uploadFileAgain' modal)}} --}}
+    {{/modal.footer}}
+{{/bs-modal}}

@@ -1,0 +1,84 @@
+@import './standard-base';
+
+$ph-btn-height: 40px;
+$ph-btn-fs: 14px;
+$ph-btn-radius: 4px;
+$ph-btn-padding: 0 15px 0 15px;
+$ph-btn-fc-white: #FFFFFF;
+$ph-btn-letter-spacing: 1.5px;
+$ph-btn-second-border: 1px solid $ph-fc-content;
+$ph-btn-second-havebg-border: 1px solid #FFFFFF;
+$ph-btn-min-width: 100px;
+// $ph-btn-warp-margin: 8px 8px 8px 8px;
+$ph-btn-icon-size: 20px;
+$ph-btn-icon-height: 40px;
+$ph-btn-icon-padding: 0 7px 0 7px;
+$ph-btn-icon-width: 40px;
+$ph-btn-link-height: 20px;
+$ph-btn-link-padding: 0;
+
+.ph-btn {
+    height: $ph-btn-height;
+    padding: $ph-btn-padding;
+    font-family: $ph-font-family;
+    font-size: $ph-btn-fs;
+    color: $ph-btn-fc-white;
+    background-color: $ph-color-assist-main;
+    border-radius: $ph-btn-radius;
+    letter-spacing: $ph-btn-letter-spacing;
+    min-width: $ph-btn-min-width;
+    border: none;
+    
+    i {
+        font-size: $ph-btn-fs;
+    }
+}
+
+.ph-btn-default {
+}
+
+.ph-btn-second {
+    background-color: transparent;
+    color: $ph-fc-content;
+    border: $ph-btn-second-border;
+}
+
+.ph-btn-second-havebg {
+    background-color: transparent;
+    color: $ph-btn-fc-white;
+    border: $ph-btn-second-havebg-border;
+}
+
+.ph-btn-warning {
+    background-color: $ph-color-func-error;
+}
+
+.ph-btn-disabled {
+    background-color: $ph-color-assist-bg;
+    color: $ph-fc-assist;
+}
+
+.ph-btn-link {
+    background-color: transparent;
+    color: $ph-color-func-link;
+    border: none;
+    min-width: 0;
+    padding: $ph-btn-link-padding;
+    height: $ph-btn-link-height;
+}
+
+.ph-btn-icon {
+    letter-spacing: 0;
+    padding: $ph-btn-icon-padding;
+    width: $ph-btn-icon-width;
+    min-width: 0;
+    height: $ph-btn-icon-height;
+
+    i {
+        font-size: $ph-btn-icon-size;
+    }
+}
+
+.ph-btn-warp{
+    // margin: $ph-btn-warp-margin;
+}

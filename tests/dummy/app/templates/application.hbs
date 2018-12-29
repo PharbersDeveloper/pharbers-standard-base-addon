@@ -1,0 +1,45 @@
+<h2 id="title">Welcome to Ember</h2>
+<div>
+    {{base-button content="Click" type="ph-btn-default" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+    {{base-button content="Click" type="second" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+    {{base-button content="Click" type="warning" params="cancel"  onClick="cancel" icon="iconfont icon-plus-circle"}}
+    {{base-button content="Click" type="disabled" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+    {{base-button content="" type="icon" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+</div>
+<div local-class="bg-div">
+    {{base-button content="Click" type="default" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+    {{base-button content="Click" type="second" params="next"  onClick="next" icon="iconfont icon-plus-circle" haveBg=true}}
+    {{base-button content="Click" type="warning" params="cancel"  onClick="cancel" icon="iconfont icon-plus-circle"}}
+    {{base-button content="Click" type="disabled" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+    {{base-button content="asd" type="icon" params="next"  onClick="next" icon="iconfont icon-plus-circle"}}
+</div>
+<div>
+    {{base-input type="default" size="large" inputValue=testValue placeHolder="type something" icon="iconfont icon-plus-circle"}}
+    {{base-input type="search" size="small" inputValue=testValue1 placeHolder="type something" icon="iconfont icon-plus-circle" title="标签" searchTitle="搜索" onClick="search"}}
+    {{base-input size="small" inputValue=testValue3 placeHolder="type something" icon="iconfont icon-plus-circle" title="ABC"}}
+    {{base-input type="area" size="small" inputValue=testValue4 placeHolder="type something" icon="iconfont icon-plus-circle" title="ABC"}}
+    {{base-input size="small" inputValue=testValue5 placeHolder="type something" icon="iconfont icon-plus-circle" title="ABC"}}
+    {{base-input type="search" size="large" inputValue=testValue2 placeHolder="type something" icon="iconfont icon-plus-circle" title="标签" searchTitle="搜索" onClick="search"}}
+    {{base-input type="" size="" inputValue=testValue placeHolder="" icon=""}}
+    {{base-select title="标题" selected=testValue8 onChange=(action (mut testValue8)) options=testValue7}}
+</div>
+{{!-- {{#bs-modal
+        fade=false
+        backdropClose=false
+        keyboard=false
+        open=uploadAgain
+        onHidden=(action (mut uploadAgain) false) as |modal|}}
+    {{#modal.header closeButton=false}}
+        <h4 class="modal-title">
+            提示
+        </h4>
+    {{/modal.header}}
+    {{#modal.body}}
+        <p>是否重新上传原文件</p>
+    {{/modal.body}}
+    {{#modal.footer}}
+        {{base-button type="second" content="取消" onClick=(action modal.close)}}
+        {{base-button type="" content="重新上传" onClick=(action 'uploadFileAgain' modal)}}
+    {{/modal.footer}}
+{{/bs-modal}} --}}
+{{outlet}}

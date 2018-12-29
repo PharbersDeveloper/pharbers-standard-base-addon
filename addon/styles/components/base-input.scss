@@ -1,0 +1,179 @@
+@import "./standard-base";
+@import "./components/base-button";
+
+$ph-input-height-sm: 32px;
+$ph-input-height-lg: 40px;
+$ph-input-letter-spacing: 1.5px;
+$ph-input-radius: 4px;
+$ph-input-padding: 0 8px 0 8px;
+$ph-input-button-padding: 0 15px 0 15px;
+$ph-input-border: 1px solid $ph-fc-title;
+$ph-input-min-width: 200px;
+$ph-input-line-height: 22px;
+$ph-input-bgc: #FFFFFF;
+$ph-input-label-margin: 8px;
+$ph-input-search-radius: 4px 0 0 4px;
+$ph-input-search-button-radius: 0 4px 4px 0;
+$ph-input-area-padding: 0 8px 0 8px;
+$ph-input-area-height: 100px;
+// $ph-input-warp-margin: 8px 8px 8px 8px;
+$ph-input-icon-top: 0px;
+$ph-input-icontext-icon-top: -3px;
+$ph-input-icon-left: 8px;
+$ph-input-icon-placeholder-padding: 14px;
+
+
+
+
+.ph-input {
+    height: $ph-input-height-sm;
+    border: $ph-input-border;
+    font-family: $ph-font-family;
+    font-size: $ph-fs-content;
+    color: $ph-fc-title;
+    background-color: $ph-input-bgc;
+    padding: $ph-input-padding;
+    border-radius: $ph-input-radius;
+    letter-spacing: $ph-input-letter-spacing;
+    min-width: $ph-input-min-width;
+
+    &::-webkit-input-placeholder {
+        font-size: $ph-fs-content;
+        color: $ph-fc-assist;
+    }
+}
+
+.ph-input-label {
+    margin-right: $ph-input-label-margin;
+    color: $ph-fc-title;
+    font-size: $ph-fs-content;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.ph-input-default {
+}
+
+.ph-input-icon {
+}
+
+.ph-input-search {
+    border-radius: $ph-input-search-radius;
+    border-right-style: none;
+}
+
+.ph-input-area {
+    line-height: $ph-input-line-height;
+    vertical-align: top;
+    resize: none;
+    height: $ph-input-area-height;
+    position: relative;
+    top: -6px;
+
+    &::-webkit-input-placeholder {
+        font-size: $ph-fs-content;
+        color: $ph-fc-assist;
+    }
+}
+
+:global(.small) {
+
+        input {
+            height: $ph-input-height-sm;
+
+        }
+        button {
+            height: $ph-input-height-sm;
+
+        }
+        .ph-input-icontext{
+
+            i {
+                top: -3px;
+            }
+        }
+        .ph-input-searchbar{
+        
+            i {
+                top: -3px;
+            }
+        }
+}
+
+:global(.large) {
+
+        input {
+            height: $ph-input-height-lg;
+
+        }
+        button {
+            height: $ph-input-height-lg;
+
+        }
+        .ph-input-icontext{
+
+            i {
+                top: -1px;
+            }
+        }
+        .ph-input-searchbar{
+        
+            i {
+                top: -1px;
+            }
+        }
+}
+
+.ph-input-search-button{
+    padding: $ph-btn-padding;
+    font-family: $ph-font-family;
+    font-size: $ph-btn-fs;
+    color: $ph-btn-fc-white;
+    background-color: $ph-color-assist-main;
+    letter-spacing: $ph-btn-letter-spacing;
+    min-width: $ph-btn-min-width;
+    border-radius: $ph-input-search-button-radius;
+    position: relative;
+    left: -4px;
+    top: -1px;
+    margin-left: 0;
+    border-style: none;
+}
+
+.ph-input-warp{
+    position: relative;
+}
+
+.ph-input-searchbar{
+    display: inline;
+    position: relative;
+
+    ::-webkit-input-placeholder {
+        padding: $ph-input-icon-placeholder-padding;
+    }
+
+    i {
+        position: absolute;
+        top: $ph-input-icon-top;
+        left: $ph-input-icon-left;
+        color: $ph-fc-assist;
+        font-size: $ph-fs-content;
+    }
+}
+
+.ph-input-icontext{
+    display: inline;
+    position: relative;
+
+    ::-webkit-input-placeholder {
+        padding: $ph-input-icon-placeholder-padding;
+    }
+
+    i {
+        position: absolute;
+        // top: -3px;
+        left: $ph-input-icon-left;
+        color: $ph-fc-assist;
+        font-size: $ph-fs-content;
+    }
+}
